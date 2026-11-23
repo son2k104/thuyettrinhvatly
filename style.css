@@ -3,8 +3,8 @@
    ===================================================================== */
 :root{
   --bg:#FFFFFF; --purple:#2E1065; --red:#DC2626; --orange:#F97316; --yellow:#FACC15;
-  --text:#1B2233; --muted:#5B6578; --ok:#22C55E; --bad:#EF4444;
-  --glass:rgba(255,255,255,.92); --glass-b:rgba(15,23,42,.13); --thermal-text:linear-gradient(90deg,#6D28D9,#DC2626 45%,#EA580C 80%,#D97706); --ink-hot:#C2410C;
+  --text:#0F172A; --muted:#475569; --ok:#22C55E; --bad:#EF4444;
+  --glass:rgba(255,255,255,.92); --glass-b:rgba(15,23,42,.13); --thermal-text:linear-gradient(90deg,#0B2A6F,#1D4ED8); --ink-hot:#1D4ED8;
   --thermal:linear-gradient(90deg,#2E1065,#DC2626 38%,#F97316 68%,#FACC15);
   --sans:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
@@ -46,7 +46,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #counter{font-family:var(--mono);font-size:1.00rem;padding:.35rem .8rem;border-radius:99px;background:var(--glass);border:1px solid var(--glass-b)}
 .tbtn{font-size:0.89rem;padding:.4rem .85rem;border-radius:99px;background:var(--glass);border:1px solid var(--glass-b);transition:.2s;backdrop-filter:blur(10px)}
 .tbtn:hover{border-color:var(--orange);box-shadow:0 0 1rem rgba(249,115,22,.35)}
-.tbtn.warn{border-color:#D97706;color:#B45309}
+.tbtn.warn{border-color:#1D4ED8;color:#1D4ED8}
 .dots{position:fixed;right:.9rem;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.7rem}
 .dots button{width:.7rem;height:.7rem;border-radius:50%;border:1.5px solid var(--muted);background:transparent;padding:0;transition:.25s}
 .dots button.on{background:var(--orange);border-color:var(--orange);box-shadow:0 0 .9rem var(--orange);transform:scale(1.35)}
@@ -68,10 +68,10 @@ input[type=range]::-moz-range-thumb{width:1.2rem;height:1.2rem;border-radius:50%
 #s1{align-items:center;justify-content:center;text-align:center;padding:0}
 #s1 canvas{position:absolute;inset:0;width:100%;height:100%}
 #s1 .hero{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.1rem}
-.hero .tag{font-family:var(--mono);letter-spacing:.35em;font-size:1.00rem;color:var(--orange)}
-.hero h1{font-size:5.4rem;font-weight:800;line-height:1;letter-spacing:-.02em;background:linear-gradient(90deg,#6D28D9,#DC2626 40%,#EA580C 75%,#D97706);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 .3rem 1.2rem rgba(249,115,22,.35));animation:glow 3.2s ease-in-out infinite}
-@keyframes glow{50%{filter:drop-shadow(0 .3rem 2rem rgba(220,38,38,.45))}}
-.hero p.sub{font-size:1.46rem;font-style:italic;color:#334155;max-width:48rem}
+.hero .tag{font-family:var(--mono);letter-spacing:.35em;font-size:1.00rem;color:#1D4ED8}
+.hero h1{font-size:5.4rem;font-weight:800;line-height:1;letter-spacing:-.02em;background:linear-gradient(90deg,#0B2A6F,#1D4ED8 60%,#2563EB);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 .3rem 1.2rem rgba(29,78,216,.28));animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{50%{filter:drop-shadow(0 .3rem 2rem rgba(29,78,216,.4))}}
+.hero p.sub{font-size:1.46rem;font-style:italic;color:#1E293B;max-width:48rem}
 .hero .go{margin-top:.8rem;font-size:1.24rem;font-weight:700;padding:.85rem 2.2rem;border-radius:99px;border:none;color:#14090a;background:var(--thermal);box-shadow:0 0 2.4rem rgba(249,115,22,.5);transition:.25s}
 .hero .go:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 0 3.6rem rgba(250,204,21,.7)}
 .hero .hint{font-family:var(--mono);font-size:0.85rem;color:var(--muted)}
@@ -181,7 +181,7 @@ input[type=range]::-moz-range-thumb{width:1.2rem;height:1.2rem;border-radius:50%
 .score{font-family:var(--mono);color:var(--ink-hot);font-size:1.18rem}
 .result{text-align:center;display:flex;flex-direction:column;gap:.8rem;align-items:center;padding:1rem}
 .result .big{font-size:5rem;font-weight:800;font-family:var(--mono);background:var(--thermal-text);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
-.result p{font-size:1.30rem;color:#334155}
+.result p{font-size:1.30rem;color:#1E293B}
 
 /* ---- Tinh chỉnh sau khi tăng cỡ chữ ---- */
 .switch{white-space:nowrap;flex:none}
@@ -196,3 +196,7 @@ input[type=range]::-moz-range-thumb{width:1.2rem;height:1.2rem;border-radius:50%
 
 .cv{background:#0B0F19;border-color:rgba(15,23,42,.25)}
 .prop svg{background:#0B0F19}
+
+/* Màu chữ chủ đạo: xanh đen + xanh dương đậm (đổi --ink-hot / --thermal-text ở :root để chỉnh) */
+.slide-head h2,.result .big{background:var(--thermal-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kicker,.fact b,.hot{color:var(--ink-hot)}
