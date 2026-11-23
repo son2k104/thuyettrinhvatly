@@ -144,11 +144,11 @@ document.addEventListener('keydown',e=>{ if(!modalOpen) return;
    ===================================================================== */
 (function(){
   const o=mkCanvas($('#cv1')), N=9;
-  addAnim(0,o,(o,t)=>{const {ctx,w,h}=o; ctx.clearRect(0,0,w,h); ctx.globalCompositeOperation='lighter';
+  addAnim(0,o,(o,t)=>{const {ctx,w,h}=o; ctx.clearRect(0,0,w,h); ctx.globalCompositeOperation='source-over';
     for(let k=0;k<N;k++){
       const col=.5+.5*Math.sin(t*.0004+k*.75), y0=h*.7+(k-N/2)*h*.024, amp=h*(.07+.025*Math.sin(t*.0006+k));
       const lam=w/(1.1+k*.28), ph=t*.0005*(1+k*.18);
-      for(const [lw,al] of [[9,.07],[1.8,.75]]){
+      for(const [lw,al] of [[9,.09],[2.2,.8]]){
         ctx.beginPath(); for(let x=0;x<=w;x+=6){const y=y0+amp*Math.sin(x/lam*6.283+ph)*(.55+.45*Math.sin(x/w*3.14));x?ctx.lineTo(x,y):ctx.moveTo(x,y);}
         ctx.strokeStyle=heat(col,al); ctx.lineWidth=lw; ctx.stroke();}
     } ctx.globalCompositeOperation='source-over';});
