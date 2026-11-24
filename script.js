@@ -15,15 +15,24 @@ const IMAGES = [
   {file:'1795358819091_9147406511109628068_9147406511109628068_1b9a7b4c20ca23609956c50db1aba7de.jpg', title:'Vật lý trị liệu & phục hồi — đèn hồng ngoại chiếu chi dưới'},
   {file:'1795358819093_9147406511109628068_9147406511109628068_c5e0948f2bc554c554fc440f8532c3ec.jpg', title:'Bếp hồng ngoại — mặt bếp tỏa nhiệt để nấu chín thức ăn'},
   {file:'1795358819095_9147406511109628068_9147406511109628068_162f03ade6b1fc12b86cf7f088104abd.jpg', title:'Ảnh nhiệt — động vật nổi bật trong đêm tối'},
-  {file:'1795358819097_9147406511109628068_9147406511109628068_0b7c4b3903ed081fdbb9aae3717a14d1.jpg', title:'Camera đo thân nhiệt hàng loạt'}
+  {file:'1795358819097_9147406511109628068_9147406511109628068_0b7c4b3903ed081fdbb9aae3717a14d1.jpg', title:'Camera đo thân nhiệt hàng loạt'},
+  // --- 8 ảnh bổ sung (chỉ số 11–18) ---
+  {file:'1795518078954_8325914631657788637_g9164734672424975481_7cac975ad6c958af5acab72ce4f3113d.jpg', title:'Camera nhiệt giám sát lò quay công nghiệp — vật nóng phát hồng ngoại mạnh (tác dụng nhiệt)'},
+  {file:'1795518078978_8325914631657788637_g9164734672424975481_bd17051ea34035d956bf0b6a2fc862fc.jpg', title:'Lò nướng hồng ngoại — thanh đốt nóng đỏ bức xạ nhiệt làm chín thức ăn'},
+  {file:'1795518079002_8325914631657788637_g9164734672424975481_470c3eb7c901638e41fbe24da566ca71.jpg', title:'Điều khiển từ xa hướng về Tivi — truyền lệnh bằng tia hồng ngoại'},
+  {file:'1795518079050_8325914631657788637_g9164734672424975481_ca6da0f524182a65f6f5f83003c39b00.jpg', title:'Sợi cáp quang — truyền dữ liệu tốc độ cao bằng xung ánh sáng (chủ yếu hồng ngoại gần)'},
+  {file:'1795518079075_8325914631657788637_g9164734672424975481_500eb6d5150a6c6ca5273ff20b4a3e73.jpg', title:'LED hồng ngoại ở đầu điều khiển phát xung tín hiệu mã hóa'},
+  {file:'1795518079099_8325914631657788637_g9164734672424975481_4ebe1f17d4e75ffe1d500a425d0d1e3d.jpg', title:'Bếp hồng ngoại — mặt bếp bức xạ nhiệt trực tiếp lên nồi'},
+  {file:'1795518079122_8325914631657788637_g9164734672424975481_14b459fe8cc0c74e700a3df5f1d4055b.jpg', title:'Bếp nướng hồng ngoại — nhiệt bức xạ làm chín thức ăn'},
+  {file:'1795518078875_8325914631657788637_g9164734672424975481_c8dbe212d442c13d2444ca6baf89c55f.jpg', title:'Camera nhiệt (FLIR) hiển thị ảnh nhiệt từ bức xạ hồng ngoại'}
 ];
 // 5 ứng dụng trên Slide 5: imgs = chỉ số ảnh (0–10) sẽ mở khi bấm; cx,cy = tâm thiết bị trong khung cảnh 800×500
 const APPS = [
-  {id:'remote', n:'01', title:'Điều khiển từ xa', desc:'LED hồng ngoại phát chuỗi xung mã hóa tới Tivi, điều hòa.', imgs:[5], cx:150, cy:230},
-  {id:'stove',  n:'02', title:'Bếp điện & lò nướng', desc:'Dây điện trở/bóng hồng ngoại tỏa nhiệt mạnh để nấu chín thức ăn.', imgs:[8], cx:545, cy:410},
-  {id:'comms',  n:'03', title:'Truyền thông & cáp quang', desc:'Truyền dẫn dữ liệu tốc độ cao bằng xung hồng ngoại.', imgs:[2,0,1], cx:450, cy:115},
+  {id:'remote', n:'01', title:'Điều khiển từ xa', desc:'LED hồng ngoại phát chuỗi xung mã hóa tới Tivi, điều hòa.', imgs:[5,13,15], cx:150, cy:230},
+  {id:'stove',  n:'02', title:'Bếp điện & lò nướng', desc:'Dây điện trở/bóng hồng ngoại tỏa nhiệt mạnh để nấu chín thức ăn.', imgs:[8,16,12,17,11], cx:545, cy:410},
+  {id:'comms',  n:'03', title:'Truyền thông & cáp quang', desc:'Truyền dẫn dữ liệu tốc độ cao bằng xung hồng ngoại.', imgs:[2,14,0,1], cx:450, cy:115},
   {id:'therapy',n:'04', title:'Vật lý trị liệu & phục hồi', desc:'Đèn hồng ngoại giảm đau cơ khớp, tăng lưu thông máu, làm ấm vùng điều trị.', imgs:[4,7], cx:730, cy:170},
-  {id:'night',  n:'05', title:'Quan sát ban đêm', desc:'Camera hồng ngoại, kính nhìn đêm quan sát trong bóng tối hoặc sương mù.', imgs:[3,6,9,10], cx:340, cy:330}
+  {id:'night',  n:'05', title:'Quan sát ban đêm', desc:'Camera hồng ngoại, kính nhìn đêm quan sát trong bóng tối hoặc sương mù.', imgs:[3,6,9,10,18], cx:340, cy:330}
 ];
 // 5 câu hỏi trắc nghiệm (a = chỉ số đáp án đúng, bắt đầu từ 0)
 const QUIZ = [
@@ -207,6 +216,7 @@ document.addEventListener('keydown',e=>{ if(!modalOpen) return;
   const o=mkCanvas($('#cv3a')), rng=$('#tRange'), SIG=5.670374e-8;
   [['−273,15 °C (0 K)',-273.15],['Phòng 25 °C',25],['Cơ thể 37 °C',37],['Bếp điện 500 °C',500]].forEach(([t,v])=>{
     const b=document.createElement('button');b.className='btn';b.textContent=t;b.onclick=()=>{rng.value=v;upd();};$('#tPresets').appendChild(b);});
+  { const b=document.createElement('button');b.className='btn';b.textContent='📷 Ví dụ thực tế';b.onclick=()=>openModal(11,'Tác dụng nhiệt — ví dụ thực tế');$('#tPresets').appendChild(b); }
   let K=298.15, I=0, parts=[], rings=[], tr=0, tp=0, lbl='';
   function upd(){
     K=Math.max(0,parseFloat(rng.value)+273.15); if(K<1e-6)K=0; const C=K-273.15;
@@ -215,7 +225,7 @@ document.addEventListener('keydown',e=>{ if(!modalOpen) return;
     const P=SIG*Math.pow(K,4); $('#tP').textContent=K===0?'0 W/m²':P>=1e3?vn(P/1e3,1)+' kW/m²':Math.round(P)+' W/m²';
     $('#tW').textContent=K===0?'—':vn(2897.8/K,1)+' µm';
     lbl=K===0?'0 K — ĐỘ KHÔNG TUYỆT ĐỐI':Math.abs(C-25)<1.5?'NHIỆT ĐỘ PHÒNG':Math.abs(C-37)<1.2?'CƠ THỂ NGƯỜI':C>=450?'MẶT BẾP ĐIỆN':'';
-    $$('#tPresets .btn').forEach((b,i)=>b.classList.toggle('on',[-273.15,25,37,500][i]===parseFloat(rng.value)));
+    $$('#tPresets .btn').slice(0,4).forEach((b,i)=>b.classList.toggle('on',[-273.15,25,37,500][i]===parseFloat(rng.value)));
   }
   rng.oninput=upd; upd();
   addAnim(2,o,(o,t,dt)=>{const {ctx,w,h}=o; ctx.clearRect(0,0,w,h); const cx=w/2, cy=h*.52, s=Math.min(w,h)/420;
@@ -447,7 +457,7 @@ document.addEventListener('keydown',e=>{ if(!modalOpen) return;
   const list=$('#apps');
   APPS.forEach(a=>{const b=document.createElement('button');b.className='app';b.innerHTML=`<em>${a.n}</em><span><b>${a.title}</b><small>${a.desc}</small></span>`;
     b.onclick=()=>openApp(a); b.onmouseenter=()=>focus=a; b.onmouseleave=()=>focus=null; list.appendChild(b);});
-  const gb=document.createElement('button');gb.className='gallery-btn';gb.textContent='▶ Xem bộ ảnh minh họa (11 ảnh)';gb.onclick=()=>openModal(0);list.appendChild(gb);
+  const gb=document.createElement('button');gb.className='gallery-btn';gb.textContent=`▶ Xem bộ ảnh minh họa (${IMAGES.length} ảnh)`;gb.onclick=()=>openModal(0);list.appendChild(gb);
 
   // Điều khiển từ xa: bấm nút nguồn → chuỗi xung IR tới Tivi
   const cv=mkCanvas($('#cv5')); let bursts=[], tvOn=false, tvTimer=0;

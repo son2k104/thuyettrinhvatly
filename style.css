@@ -200,3 +200,6 @@ input[type=range]::-moz-range-thumb{width:1.2rem;height:1.2rem;border-radius:50%
 /* Màu chữ chủ đạo: xanh đen + xanh dương đậm (đổi --ink-hot / --thermal-text ở :root để chỉnh) */
 .slide-head h2,.result .big{background:var(--thermal-text);-webkit-background-clip:text;background-clip:text;color:transparent}
 .kicker,.fact b,.hot{color:var(--ink-hot)}
+
+.lead{font-size:1rem;color:var(--muted);flex:none;margin-top:-.4rem}
+.lead b,.panel p.d b{color:var(--ink-hot)}
